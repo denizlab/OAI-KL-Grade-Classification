@@ -11,15 +11,8 @@ import h5py
 '''
 Build train and test for bounding box detector.
 '''
-<<<<<<< HEAD
 df1 = pd.read_csv('bounding_box_oulu/OAI_test.csv',header=None,sep=' ')
 df2 = pd.read_csv('bounding_box_oulu/OAI_val.csv',header=None,sep=' ')
-no_knee = pd.read_csv('/gpfs/data/denizlab/Users/bz1030/KneeNet/KneeProject/UnsupervisedData/data/no_knee.txt',header = None)
-=======
-df1 = pd.read_csv('bounding_box_oulu/OAI_test.csv',header = None,sep=' ')
-df2 = pd.read_csv('bounding_box_oulu/OAI_val.csv',header = None,sep=' ')
-no_knee = pd.read_csv('bounding_box_oulu/no_knee.txt',header = None)
->>>>>>> 5e03d589fe09b235ac8a079b6ffa919209703438
 print(df1.head())
 print(df2.head())
 
@@ -35,7 +28,8 @@ def invert(img):
     img = img.max() - img
     return img
 
-def writeDicom2H5(df,output_folder, oai_dataset, stage = 'train'):
+
+def writeDicom2H5(df,output_folder, oai_dataset, stage='train'):
     total_samples = df.shape[0]
     count = 0
     contents_folder = output_folder

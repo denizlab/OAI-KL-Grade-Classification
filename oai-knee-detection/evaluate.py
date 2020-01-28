@@ -14,7 +14,7 @@ parser.add_argument('-lm', '--load-model', type=str, default=None, dest='load_mo
 
 def main(args):
     model_dir = args.load_model
-    test_contents = '/gpfs/data/denizlab/Users/bz1030/KneeNet/KneeProject/KneeDetection/bounding_box_oulu/test_with_neg_no_replacement.csv'
+    test_contents = './bounding_box_oulu/test.csv'
     test_df = pd.read_csv(test_contents)#.sample(n=32).reset_index()
     try:
         test_df.drop(['index'], axis = 1, inplace=True)
@@ -40,50 +40,22 @@ def main(args):
     print('Number of model parameters: {}'.format(
             sum([p.data.nelement() for p in net.parameters()])))
 
-    is_classifer = True
+    criterion = MSELoss()
+    val_loss, all_names, all_labels, all_preds = validate_epoch(net, criterion, test_loader, USE_CUDA)
+    iou_l, iou_r = iou(all_labels, all_preds)
+    # acc = compute_binary_acc(all_knee_labels, all_knee_preds)
+    iou_total = (iou_l.mean() + iou_r.mean()) / 2
+    print('IoU:{};'.format(iou_total))
+    all_labels = np.vstack(all_labels)
+    all_preds = np.vstack(all_preds)
 
-    if is_classifer:
-        criterion = CombinedLoss(30, None)
-        val_loss, all_names, all_labels, all_preds, all_knee_labels, all_knee_preds = validate_epoch(net, criterion,
-                                                                                                     test_loader,
-                                                                                                     USE_CUDA,
-                                                                                                     is_classifer)
-        iou_l, iou_r = iou(all_labels, all_preds, all_knee_labels)
-        acc = compute_binary_acc(all_knee_labels, all_knee_preds)
-        iou_total = (iou_l.mean() + iou_r.mean()) / 2
-        print('IoU:{}; Acc:{}'.format(iou_total, acc))
-        all_labels = np.vstack(all_labels)
-        all_preds = np.vstack(all_preds)
-        all_knee_preds = np.vstack(all_knee_preds)
-        all_knee_preds = all_knee_preds.reshape(-1, 1)
-        all_knee_labels = np.hstack(all_knee_labels)
-        all_knee_labels = all_knee_labels.reshape(-1, 1)
-        # print(all_knee_labels, all_knee_preds)
-
-        df = [all_labels, all_preds, all_knee_labels, all_knee_preds]
-        df = np.hstack(df)
-        df = pd.DataFrame(df)
-        print(df.shape)
-        df['file_path'] = all_names
-        df.to_csv('test_output.csv', index=False)
-        print('Val Loss {}'.format(val_loss))
-    else:
-        criterion = MSELoss()
-        val_loss, all_names, all_labels, all_preds = validate_epoch(net, criterion, test_loader, USE_CUDA)
-        iou_l, iou_r = iou(all_labels, all_preds)
-        # acc = compute_binary_acc(all_knee_labels, all_knee_preds)
-        iou_total = (iou_l.mean() + iou_r.mean()) / 2
-        print('IoU:{};'.format(iou_total))
-        all_labels = np.vstack(all_labels)
-        all_preds = np.vstack(all_preds)
-
-        df = [all_labels, all_preds]
-        df = np.hstack(df)
-        df = pd.DataFrame(df)
-        print(df.shape)
-        df['file_path'] = all_names
-        df.to_csv('test_output.csv', index=False)
-        print('Val Loss {}'.format(val_loss))
+    df = [all_labels, all_preds]
+    df = np.hstack(df)
+    df = pd.DataFrame(df)
+    print(df.shape)
+    df['file_path'] = all_names
+    df.to_csv('test_output.csv', index=False)
+    print('Val Loss {}'.format(val_loss))
 
 
 if __name__ == '__main__':

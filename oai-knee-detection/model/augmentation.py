@@ -5,7 +5,6 @@ import numbers
 import numpy as np
 import scipy.ndimage as ndimage
 from scipy.ndimage.interpolation import rotate
-<<<<<<< HEAD
 
 
 class RandomLRFlip(object):
@@ -23,8 +22,6 @@ class RandomLRFlip(object):
         return img
 
 
-=======
->>>>>>> 5e03d589fe09b235ac8a079b6ffa919209703438
 class CenterCrop(object):
     """
     Performs center crop of an image of a certain size.
@@ -98,11 +95,6 @@ def random_crop(img, random_crop_size):
     return img[y:(y+dy), x:(x+dx), :]
 
 '''
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 5e03d589fe09b235ac8a079b6ffa919209703438
 def correct_gamma16(img, gamma):
     """
     Corrects gamma of a 16-bit image

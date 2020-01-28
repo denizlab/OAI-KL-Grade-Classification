@@ -32,19 +32,7 @@ test.columns = cols
 val.columns = cols
 result.columns = cols
 
-train_neg = result.sample(frac=0.7)
-result = result.loc[~result.index.isin(train_neg)]
-train_with_neg = train.append(train_neg.sample(n=int(train.shape[0] * 0.5), replace=True), ignore_index=True)
 
-test_neg = result.sample(frac=0.67)
-result = result.loc[~result.index.isin(test_neg)]
-test_with_neg = test.append(test_neg.sample(n=int(test.shape[0] * 0.5), replace=True), ignore_index=True)
-#test_with_neg = pd.concat([test, test_neg.sample(n=int(test.shape[0] * 0.5), replace=True)])
-
-result = result.loc[~result.index.isin(test_neg)]
-val_with_neg = val.append(result.sample(n=int(val.shape[0] * 0.5), replace=True), ignore_index=True)
-
-
-train_with_neg.to_csv('train_with_neg_no_replacement.csv', index=False)
-test_with_neg.to_csv('test_with_neg_no_replacement.csv', index=False)
-val_with_neg.to_csv('val_with_neg_no_replacement.csv', index=False)
+train_with_neg.to_csv('train.csv', index=False)
+test_with_neg.to_csv('test.csv', index=False)
+val_with_neg.to_csv('val.csv', index=False)
