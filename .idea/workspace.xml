@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5cbb2f1b-91c5-43e2-8a47-a7d03624588a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/OAI-KL-Grade-Classification.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oai-knee-detection/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/oai-knee-detection/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,85 +26,65 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="true" current-in-tab="false">
-            <entry file="remoteDeploymentFS://&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/main.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="637">
-                  <caret line="121" column="20" lean-forward="true" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="20" />
-                  <folding>
-                    <element signature="e#0#12#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="true" current-in-tab="false">
-            <entry file="remoteDeploymentFS://&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/data.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="436">
-                  <caret line="126" column="55" selection-start-line="126" selection-start-column="55" selection-end-line="126" selection-end-column="55" />
-                  <folding>
-                    <element signature="e#0#9#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="true" current-in-tab="true">
-            <entry file="remoteDeploymentFS://&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/submits_bf/submit_cbam.lsf">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="true" current-in-tab="false">
-            <entry file="remoteDeploymentFS://&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/utils.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="195" lean-forward="true" selection-start-line="195" selection-end-line="195" />
-                  <folding>
-                    <element signature="e#0#10#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="true" current-in-tab="false">
-            <entry file="remoteDeploymentFS://&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/augmentation.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1890">
-                  <caret line="66" selection-start-line="66" selection-end-line="66" />
-                  <folding>
-                    <element signature="e#0#13#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="true" current-in-tab="true">
-            <entry file="remoteDeploymentFS://&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/train.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-                  <folding>
-                    <element signature="e#0#12#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="637">
+              <caret line="121" column="20" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="436">
+              <caret line="126" column="55" selection-start-line="126" selection-start-column="55" selection-end-line="126" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="true" current-in-tab="true">
+        <entry file="remoteDeploymentFS://&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/submits_bf/submit_cbam.lsf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="195" selection-start-line="195" selection-end-line="195" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/augmentation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1890">
+              <caret line="66" selection-start-line="66" selection-end-line="66" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -159,6 +136,7 @@
         <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/main.py" />
         <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/data.py" />
         <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/submits_bf/submit_cbam.lsf" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -173,7 +151,25 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="OAI-KL-Grade-Classification" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OAI-KL-Grade-Classification" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OAI-KL-Grade-Classification" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OAI-KL-Grade-Classification" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -217,12 +213,12 @@
       <updated>1580243452120</updated>
       <workItem from="1580243458391" duration="13092000" />
       <workItem from="1580330715335" duration="2825000" />
-      <workItem from="1580396385631" duration="1940000" />
+      <workItem from="1580396385631" duration="2347000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17857000" />
+    <option name="totallyTimeSpent" value="18264000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -236,7 +232,7 @@
   <component name="ToolWindowManager">
     <frame x="1440" y="-142" width="1920" height="1080" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.18526466" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18477103" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -250,7 +246,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="File Transfer" order="9" weight="0.32673267" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.280198" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.280198" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -284,6 +280,14 @@
           <second_editor />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/environment.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3445" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
