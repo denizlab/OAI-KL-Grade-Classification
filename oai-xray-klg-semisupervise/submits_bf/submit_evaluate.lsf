@@ -1,0 +1,25 @@
+#!/bin/bash
+<<<<<<< HEAD
+#BSUB -q short
+#BSUB -n 10
+#BSUB -gpu "num=1:mode=shared:j_exclusive=yes"
+##BSUB -e /gpfs/data/denizlab/Users/bz1030/oa-xray-semisupervised/submits_bf/eval%J.err
+##BSUB -o /gpfs/data/denizlab/Users/bz1030/oa-xray-semisupervised/submits_bf/eval%J.out
+=======
+#BSUB -Is
+#BSUB -q short
+#BSUB -n 10
+#BSUB -gpu "num=1:mode=shared:j_exclusive=yes"
+#BSUB -e /gpfs/data/denizlab/Users/bz1030/oa-xray-semisupervised/submits_bf/eval%J.err
+#BSUB -o /gpfs/data/denizlab/Users/bz1030/oa-xray-semisupervised/submits_bf/eval%J.out
+>>>>>>> 3daec0b3c4c24e2e7ea2c7d701ac6af1c7323480
+
+. /gpfs/share/skynet/apps/anaconda3/etc/profile.d/conda.sh
+conda activate powerai1.6_env
+
+cd ../
+<<<<<<< HEAD
+python3 evaluate.py -lm /gpfs/data/denizlab/Users/bz1030/oa-xray-semisupervised/runs_normal/cbam_fl_2019-12-22_02-51-08/save/best-model-epoch-28.pt
+=======
+python3 evaluate.py -lm /gpfs/data/denizlab/Users/bz1030/oa-xray-semisupervised/runs/cbam_unsup_2019-10-25_01-11-57/save/best-model-epoch-6.pt
+>>>>>>> 3daec0b3c4c24e2e7ea2c7d701ac6af1c7323480

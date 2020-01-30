@@ -24,4 +24,5 @@ NYU. If found any false positive case during evaluation, one can simply add that
 into file `./bounding_box_oulu/no_knee.txt`. When resuming train, the following code will take new added negative labeled
 data.
 1. run `train.py` to train a model and evaluate
-1. run `train_cn.py` to train a model using center net
+1. run `train_cn.py
+` to train a model using center net

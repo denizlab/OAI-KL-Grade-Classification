@@ -1,0 +1,11 @@
+#!/bin/bash
+#BSUB -q gpu32
+#BSUB -n 10
+#BSUB -gpu "num=1:mode=shared:j_exclusive=yes"
+#BSUB -e /gpfs/data/denizlab/Users/bz1030/oa-xray-semisupervised/submits_bf/train%J.err
+
+. /gpfs/share/skynet/apps/anaconda3/etc/profile.d/conda.sh
+conda activate powerai1.6_env
+
+cd ../
+python3 main.py -n cbamfl_default -m CBAM -nus -do -nau -lf FL -fg 2

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5cbb2f1b-91c5-43e2-8a47-a7d03624588a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/OAI-KL-Grade-Classification.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oai-knee-detection/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/oai-knee-detection/README.md" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="true" current-in-tab="false">
+            <entry file="remoteDeploymentFS://&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/main.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="637">
+                  <caret line="121" column="20" lean-forward="true" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="20" />
+                  <folding>
+                    <element signature="e#0#12#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="true" current-in-tab="false">
+            <entry file="remoteDeploymentFS://&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/data.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="436">
+                  <caret line="126" column="55" selection-start-line="126" selection-start-column="55" selection-end-line="126" selection-end-column="55" />
+                  <folding>
+                    <element signature="e#0#9#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="true" current-in-tab="true">
+            <entry file="remoteDeploymentFS://&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/submits_bf/submit_cbam.lsf">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="165">
+                  <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="true" current-in-tab="false">
+            <entry file="remoteDeploymentFS://&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/utils.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="360">
+                  <caret line="195" lean-forward="true" selection-start-line="195" selection-end-line="195" />
+                  <folding>
+                    <element signature="e#0#10#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="true" current-in-tab="false">
+            <entry file="remoteDeploymentFS://&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/augmentation.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-1890">
+                  <caret line="66" selection-start-line="66" selection-end-line="66" />
+                  <folding>
+                    <element signature="e#0#13#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="true" current-in-tab="true">
+            <entry file="remoteDeploymentFS://&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/train.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="360">
+                  <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+                  <folding>
+                    <element signature="e#0#12#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>VAL</find>
+      <find>Val</find>
+      <find>Detector</find>
+      <find>log_dir</find>
+      <find>Val Loss</find>
+      <find>no_knee</find>
+      <find>validate_epoch</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oai-knee-detection/model/augmentation.py" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oai-knee-detection/bounding_box_oulu/train.csv" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oai-knee-detection/bounding_box_oulu/val_with_neg_no_replacement.csv" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oai-knee-detection/model/model.py" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oai-knee-detection/model/train_utils.py" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oai-knee-detection/scripts/run_resnet.lsf" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oai-knee-detection/train.py" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oai-knee-detection/evaluate.py" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oai-knee-detection/train_test_build.py" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oai-knee-detection/train_test_split.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/KneeNet/KneeProject/src/utils.py" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/KneeNet/KneeProject/src/main.py" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/KneeNet/KneeProject/UnsupervisedData/main.py" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/KneeNet/KneeProject/KneeDetection/dataset_generation/utils.py" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oai-knee-detection/main.py" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oai-knee-detection/scripts/run_annotation.lsf" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oai-knee-detection/play.py" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oai-knee-detection/model/dataloader.py" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/i17_Data_Process/data.py" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/i17_Data_Process/scripts/hg_infer.lsf" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/i17_Data_Process/scripts/hg_analysis.lsf" />
+        <option value="$PROJECT_DIR$/oai-knee-detection/README.md" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oai-knee-detection/dataset_generation/utils.py" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oai-knee-detection/dataset_generation/preprocessing.py" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oai-knee-detection/README.md" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/.gitignore" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/utils.py" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/augmentation.py" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/train.py" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/main.py" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/data.py" />
+        <option value="&lt;caae2354-92fe-41bf-b3e4-70721970a390&gt;/Users/bz1030/oa-xray-semisupervised/submits_bf/submit_cbam.lsf" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="1440" />
+    <option name="y" value="-142" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5cbb2f1b-91c5-43e2-8a47-a7d03624588a" name="Default Changelist" comment="" />
+      <created>1580243452120</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580243452120</updated>
+      <workItem from="1580243458391" duration="13092000" />
+      <workItem from="1580330715335" duration="2825000" />
+      <workItem from="1580396385631" duration="1940000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="17857000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1440" y="-142" width="1920" height="1080" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.18526466" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="File Transfer" order="9" weight="0.32673267" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.280198" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="13" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.14536741" />
+      <window_info anchor="right" id="SciView" order="4" />
+      <window_info anchor="right" id="Database" order="5" weight="0.3297568" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="75">
+            <caret line="5" column="65" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="65" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oai-knee-detection/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="405">
+            <caret line="27" selection-start-line="27" selection-end-line="27" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
