@@ -1,28 +1,17 @@
-main.py
----
-Used pretrained model to make prediction, and output bbox files
-Used `scripts/annote.lsf` to submite jobs
-
-
-draw_figure2.py
----
-Draw a figure with predicted bbox of given month
-```
-python draw_figure2.py 96m &
-```
-dataset_generation/
----
-Generate figures that has whole knee x-ray image with predicted bbox
-Generate dataset (h5 files) based on the summary file.
-
-
-Current model follows Fast RCNN model architecture to detect knees. The procedure
-will be
-1. run `train_test_build.py` to generate train test from OAI dataset (Oulu Lab)
-1. run `train_test_split.py` to combine the positive labeled data from OAI (Oulu Lab) with negative labeled data from
-NYU. If found any false positive case during evaluation, one can simply add that case 
-into file `./bounding_box_oulu/no_knee.txt`. When resuming train, the following code will take new added negative labeled
-data.
+# Knee Joint Localization Model
+The training data is obtained from Tiulpin et al.[Citation]. The files are located at `../data/detector`. To reproduce the experiment in paper. You will need to:
+1. run `train_test_build.py` to generate train test dataset for the detector from raw OAI dataset. 
+1. run `train_test_split.py` to split generated dataset into train test dataset content files for dataloader in later step.
 1. run `train.py` to train a model and evaluate
-1. run `train_cn.py
-` to train a model using center net
+```bash
+python3 train.py
+```
+1. run `main.py` to annotate all OAI images from given model:
+```bash
+python main.py -m 00m -md <trained model weights dir>
+```
+1. Last step will generate a `output_month.csv` file e.g. `output_00m.csv`. Then you can use `dataset_generation/preprocessing.py` to generate train/test data for the classifier.
+```bash
+python preprocessing.py -m 00m -sd ../../data/OAI_processed
+```
+Next, please refer to `../oai-xray-klg` for train/test of the classifier.
