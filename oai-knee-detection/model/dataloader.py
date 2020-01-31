@@ -43,11 +43,6 @@ class KneeDetectionDataset(data.Dataset):
             knee_label = 0
         else:
             knee_label = 1
-        # change due to the Cem move this folder
-        changed_dir = '/gpfs/data/denizlab/Datasets/i17-01339/SubData4Unsupervised/test/'
-        if 'bz1030' not in fname:
-            fname = fname.split('/')[-1]
-            fname = changed_dir + fname
         f = h5py.File(fname, 'r')
         img = f['data'].value
         f.close()
@@ -100,7 +95,7 @@ class DicomDataset(data.Dataset):
         img = img.permute(2, 0, 1)
         return img, row, col, ratio_x, ratio_y, data_path
 
-    def _preprocessing(self,data_path):
+    def _preprocessing(self, data_path):
         dicom_img = dicom.dcmread(data_path, force=True)
         img = dicom_img.pixel_array.astype(float)
         if dicom_img.PhotometricInterpretation == 'MONOCHROME1':

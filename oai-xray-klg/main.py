@@ -45,10 +45,6 @@ parser.add_argument('-ndo','--no-dropout',  action='store_false',
 parser.set_defaults(dropout=False)
 parser.add_argument('-fl','--freeze-layer',  action='store', type=int, default=0,
                     dest='freeze_layers', help='If only train layer number > this number')
-parser.add_argument('-lf','--loss-function',  action='store', default='CE',
-                    dest='loss_function', help='FL or CE', choices=['FL', 'CE'])
-parser.add_argument('-fg','--focal-gamma',  action='store', default=1, type=int,
-                    dest='fl_gamma', help='Focal loss gamma parameters')
 parser.add_argument('-dt','--data-type',  action='store', default='float', type=str,
                     dest='data_type', help='Use integer or float.')
 parser.add_argument('-dm', '--demo', action='store', dest='demo', type=str2bool,
@@ -69,7 +65,7 @@ def main():
         print('Cached:   ', round(torch.cuda.memory_cached(0)/1024**3,1), 'GB')
 
     # Instantiate network
-    print('Model configuration: model_tyoe:{}; dropout:{}; Training augmentation:{}'\
+    print('Model configuration: model_type:{}; dropout:{}; Training augmentation:{}'\
           .format(args.model_type, args.dropout, args.augmentation))
 
     # KL Grade has 5 levels

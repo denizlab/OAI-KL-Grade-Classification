@@ -11,12 +11,11 @@ import os
 import argparse
 parser = argparse.ArgumentParser(description='Networks training')
 parser.add_argument('-md', '--model_dir', action="store", dest="model_dir", type=str,
-                    help="model directory", default='./test')
+                    help="model directory", default='./run')
 parser.add_argument('-g', '--gamma', action="store", dest="gamma", type=int,
                     help="gamma parameter", default=10)
 parser.add_argument('-lmd', '--load-model-dir', action="store", dest="load_model_dir", type=str,
                     help="load model", default=None)
-parser.add_argument('-nr', '--negative-regression', action='store', dest='nr', default=None, type=float)
 
 
 def main():
@@ -24,12 +23,14 @@ def main():
     args = parser.parse_args()
     current_time = time.strftime("%Y-%m-%d_%H-%M-%S", time.gmtime())
     model_dir = args.model_dir + '/model_' + current_time
-    train_contents = './bounding_box_oulu/train.csv'
-    train_df = pd.read_csv(train_contents)#.sample(n=200).reset_index()
-    # train_df = train_df.iloc[:50]
-    val_contents = './bounding_box_oulu/val.csv'
+    train_contents = '../data/detector/train.csv'
+    train_df = pd.read_csv(train_contents)
+    val_contents = '../data/detector/val.csv'
     val_df = pd.read_csv(val_contents)
     log_dir = os.path.join(model_dir, 'log.txt')
+    if not os.path.exists(args.model_dir):
+        os.mkdir(args.model_dir)
+
     if not os.path.exists(model_dir):
         os.mkdir(model_dir)
         with open(model_dir + '/config.txt', 'w') as f:
@@ -37,8 +38,6 @@ def main():
 
     USE_CUDA = torch.cuda.is_available()
     tensor_transform_train = transforms.Compose([
-                        #RandomLRFlip(0.3),
-                        #Rotate(-3, 3),
                         transforms.ToTensor(),
                         lambda x: x.float(),
                     ])

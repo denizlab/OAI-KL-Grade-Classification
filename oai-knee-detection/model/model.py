@@ -21,7 +21,7 @@ class ResNet(nn.Module):
             self.net = resnet34(pretrained=pretrained)
         self.net.avgpool = nn.AvgPool2d(28)
 
-        self.net.fc = nn.Sequential(nn.Dropout(dropout),nn.Linear(512,8))
+        self.net.fc = nn.Sequential(nn.Dropout(dropout), nn.Linear(512,8))
 
     def forward(self, inp):
 

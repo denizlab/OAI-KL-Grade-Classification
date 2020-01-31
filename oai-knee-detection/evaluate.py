@@ -14,7 +14,7 @@ parser.add_argument('-lm', '--load-model', type=str, default=None, dest='load_mo
 
 def main(args):
     model_dir = args.load_model
-    test_contents = './bounding_box_oulu/test.csv'
+    test_contents = '../data/detector/test.csv'
     test_df = pd.read_csv(test_contents)#.sample(n=32).reset_index()
     try:
         test_df.drop(['index'], axis = 1, inplace=True)
