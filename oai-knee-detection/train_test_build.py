@@ -8,20 +8,15 @@ import cv2
 import numpy as np
 import matplotlib.patches as patches
 import h5py
+import argparse
 '''
 Build train and test for bounding box detector.
 '''
-df1 = pd.read_csv('../data/OAI_test.csv',header=None,sep=' ')
-df2 = pd.read_csv('../data/OAI_val.csv',header=None,sep=' ')
-print(df1.head())
-print(df2.head())
 
-df = df1.append(df2)
-print(df.shape)
+parser = argparse.ArgumentParser()
+parser.add_argument('-d', '--dataset', type=str, help='where to load the content file')
+parser.add_argument('-od', '--output-dir', type=str, help='Where to save the data')
 
-month = '00m'
-OAI_DATASET = '/gpfs/data/denizlab/Datasets/OAI_original'
-output_folder = '/gpfs/data/denizlab/Users/bz1030/data/bounding_box/'
 
 
 def invert(img):
@@ -89,15 +84,34 @@ def writeDicom2H5(df,output_folder, oai_dataset, stage='train'):
     print(contents)
 
 
-print(df.shape)
-train = df.sample(frac=0.7)
-df = df.drop(train.index)
-print(train.shape, df.shape)
-test = df.sample(frac=0.67)
-df = df.drop(test.index)
-val = df
-print('Training data {}; Test data {}; Val data {}.'\
-      .format(train.shape[0],test.shape[0],val.shape[0]))
-writeDicom2H5(train, output_folder, OAI_DATASET, stage='train')
-writeDicom2H5(test, output_folder, OAI_DATASET, stage='test')
-writeDicom2H5(val, output_folder, OAI_DATASET, stage='val')
+def main(args):
+    df1 = pd.read_csv('../data/OAI_test.csv',header=None,sep=' ')
+    df2 = pd.read_csv('../data/OAI_val.csv',header=None,sep=' ')
+    print(df1.head())
+    print(df2.head())
+
+    df = df1.append(df2)
+    print(df.shape)
+
+    month = '00m'
+    #OAI_DATASET = '/gpfs/data/denizlab/Datasets/OAI_original'
+    OAI_DATASET = args.dataset
+    #output_folder = '/gpfs/data/denizlab/Users/bz1030/data/bounding_box/'
+    output_folder = args.output_dir
+    print(df.shape)
+    train = df.sample(frac=0.7)
+    df = df.drop(train.index)
+    print(train.shape, df.shape)
+    test = df.sample(frac=0.67)
+    df = df.drop(test.index)
+    val = df
+    print('Training data {}; Test data {}; Val data {}.'\
+          .format(train.shape[0],test.shape[0],val.shape[0]))
+    writeDicom2H5(train, output_folder, OAI_DATASET, stage='train')
+    writeDicom2H5(test, output_folder, OAI_DATASET, stage='test')
+    writeDicom2H5(val, output_folder, OAI_DATASET, stage='val')
+
+
+if __name__ == '__main__':
+    args = parser.parse_args()
+    main(args)

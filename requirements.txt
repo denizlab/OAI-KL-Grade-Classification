@@ -7,3 +7,4 @@ tensorwatch==0.8.4
 torchvision==0.2.1
 matplotlib==2.2.2
 opencv-python==3.4.2
+h5py==2.8.0
