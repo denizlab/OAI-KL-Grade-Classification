@@ -1,22 +1,22 @@
 # Knee Joint Localization Model
 The training data is obtained from Tiulpin et al.[Citation]. The files are located at `../data/detector`. To reproduce the experiment in paper. You will need to:
 1. run `train_test_build.py` to generate train test dataset for the detector from raw OAI dataset. The script takes images from OAI 00m and perform pre-processing.
-1. Prepare train/test split by following example in [../data/train.csv](https://github.com/denizlab/OAI-KL-Grade-Classification/tree/master/data/detector). The file looks like
+2. Prepare train/test split by following example in [../data/train.csv](https://github.com/denizlab/OAI-KL-Grade-Classification/tree/master/data/detector). The file looks like
 ```
 0,1,2,3,4,5,6,7,8
 /gpfs/data/denizlab/Users/bz1030/data/bounding_box/train/0.E.1_9679795_20050907_01087203_001.h5,0.6247968423496634,0.29277998862990334,0.9034130485256558,0.6338828880045481,0.13628976085442304,0.316372939169983,0.41490596703041555,0.6574758385446277
 /gpfs/data/denizlab/Users/bz1030/data/bounding_box/train/0.C.2_9687273_20040914_00267603_001.h5,0.5451764705882354,0.34777618364418933,0.8218823529411765,0.685222381635581,0.16282352941176473,0.32969870875179336,0.4395294117647059,0.667144906743185
 ```
 The first column is the directory where you save the image file. The columns 2 - 9 are the coordinates `[x1, y1, x2, y2, x'1, y'1, x'2, y'2]` that normalized by the original image size. For example, if image size is 1000x1000, and original `x1` is 500, then it will be 0.5 in the file. Note, `x` stands for width and `y` stands for height.
-1. run `train.py` to train a model and evaluate
+3. run `train.py` to train a model and evaluate
 ```bash
 python3 train.py
 ```
-1. run `main.py` to annotate all OAI images from given model:
+4. run `main.py` to annotate all OAI images from given model:
 ```bash
 python main.py -m 00m -md <trained model weights dir>
 ```
-1. Last step will generate a `output_month.csv` file e.g. `output_12m.csv`. 
+5. Last step will generate a `output_month.csv` file e.g. `output_12m.csv`. 
 The file will look like
 ```
 0,1,2,3,4,5,6,7,rows,cols,ratios_x,ratios_y,fname
