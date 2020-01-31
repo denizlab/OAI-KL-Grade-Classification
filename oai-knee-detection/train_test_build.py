@@ -11,8 +11,8 @@ import h5py
 '''
 Build train and test for bounding box detector.
 '''
-df1 = pd.read_csv('bounding_box_oulu/OAI_test.csv',header=None,sep=' ')
-df2 = pd.read_csv('bounding_box_oulu/OAI_val.csv',header=None,sep=' ')
+df1 = pd.read_csv('../data/OAI_test.csv',header=None,sep=' ')
+df2 = pd.read_csv('../data/OAI_val.csv',header=None,sep=' ')
 print(df1.head())
 print(df2.head())
 
