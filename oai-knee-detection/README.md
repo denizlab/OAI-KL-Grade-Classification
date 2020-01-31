@@ -1,5 +1,5 @@
 # Knee Joint Localization Model
-The training data is obtained from Tiulpin et al.[Citation]. The files are located at `../data/detector`. To reproduce the experiment in paper. You will need to:
+The training data is obtained from Tiulpin et al.[1]. The files are located at `../data/detector`. To reproduce the experiment in paper. You will need to:
 1. run `train_test_build.py` to generate train test dataset for the detector from raw OAI dataset. The script takes images from OAI 00m and perform pre-processing.
 2. Prepare train/test split by following example in [../data/train.csv](https://github.com/denizlab/OAI-KL-Grade-Classification/tree/master/data/detector). The file looks like
 ```
@@ -31,3 +31,8 @@ Then you can use `dataset_generation/preprocessing.py` to generate train/test da
 python preprocessing.py -m 00m -sd ../../data/OAI_processed
 ```
 Next, please refer to `../oai-xray-klg` for train/test of the classifier.
+
+# References
+
+[1] *Tiulpin, A., Thevenot, J., Rahtu, E., Lehenkari, P., & Saarakkala, S. (2018). Automatic Knee Osteoarthritis Diagnosis from Plain Radiographs: A Deep Learning-Based Approach. Scientific reports, 8(1), 1727.*
+
