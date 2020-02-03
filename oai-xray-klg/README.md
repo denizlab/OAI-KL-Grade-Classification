@@ -1,5 +1,5 @@
 # KL-grade Classifer
-This part of Repo contains code that trains a KL-grade classifier with ResNet and ResNet with [CBAM](https://github.com/Jongchan/attention-module).
+This part of Repo contains code that trains a KL-grade classifier with ResNet and ResNet with [CBAM](https://github.com/Jongchan/attention-module). The ResNet with CBAM code is forked from [CBAM Repo](https://github.com/Jongchan/attention-module)
 
 # Instruction
 The training of classifier happens after the detector has been trained and all OAI data has been annotated by the detector and pre-processed. Please refer to [../data/classifier](https://github.com/denizlab/OAI-KL-Grade-Classification/tree/master/data/classifier) for how to prepare a content csv file for dataloader. The file looks like
@@ -19,3 +19,9 @@ python3 main.py -n baseline -m CBAM -do\
  -dc /gpfs/data/denizlab/Users/bz1030/data/OAI_proj15/
 ```
 Above code will get content file from `OAI_proj15` file and then load data from `OAI_processed_new4`. Arguments `-m` can have `baseline` or `CBAM` which stand for the experiments mentioned in paper. Please refer `./main.py` for description of other arguments.
+
+To reproduce all attention heatmap, please run the following code
+```bash
+python3 attention_map.py -lm <model-weights> -hd <home-dir-where-you-saved-h5-files> -sp <summary-path>
+```
+Refer to `attention_map.py` for detail about what these files are.
