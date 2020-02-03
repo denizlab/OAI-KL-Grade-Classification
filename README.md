@@ -1,5 +1,10 @@
 # About
 This Repo contains code for paper **Attention-based CNN for KL Grade Classification: Data from the Osteoarthritis Initiative**
+# Repo structure
+* `./data` contains data for training/testing data for detector and classifier. `OAI_summary.csv` file is from OAI dataset, and contains metadata for all patients. The train/test split gave the performance mentioned in paper.
+* `./model_weights` contains model weights that can be readily used by `torch.load` with the performance mentioned in paper.
+* `./oai-knee-detection` contains code to train a detector and generate all annotations
+* `./oai-xray-klg` contains code to train classifier and generate the attention map from GradCAM
 
 # Instruction
 Please refer to `requirements.txt` for install all dependencies for this project. `./data` folder contains example content file for train/test data used in dataloader for both detector and classifier. `./model_weights` folder contains model weights that achieved the performance metrics mentioned in paper.
