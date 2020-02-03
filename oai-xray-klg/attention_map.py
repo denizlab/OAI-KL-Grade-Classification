@@ -21,20 +21,17 @@ from utils import gradcam_resnet
 parser = argparse.ArgumentParser()
 parser.add_argument('-lm', '--load-model', action='store', dest='load_model',
                     default=None, type=str)
+parser.add_argument('-hp', '--home-path', action='store', dest='home_path',
+                    default=None, type=str, help='Path where you have all h5 file saved')
+parser.add_argument('-sp', '--summary-path', action='store', dest='summary_path',
+                    default=None, type=str, help='Path of dataloader file train.csv/val.csv/test.csv')
 if __name__ == '__main__':
     args = parser.parse_args()
     USE_CUDA = torch.cuda.is_available()
     device = torch.device("cuda" if USE_CUDA else "cpu")
-    job_number = int(1)
-<<<<<<< HEAD
-    HOME_PATH = '/gpfs/data/denizlab/Users/bz1030/data/OAI_processed_new4/'
-    summary_path = '/gpfs/data/denizlab/Users/bz1030/data/OAI_processed_new4/'
-    test = pd.read_csv(summary_path + 'test_proj15.csv')#.sample(n=50).reset_index() # split train - test set.
-=======
-    HOME_PATH = '/gpfs/data/denizlab/Users/bz1030/data/OAI_processed_new3/'
-    summary_path = '/gpfs/data/denizlab/Users/bz1030/data/OAI_processed_new3/'
-    test = pd.read_csv(summary_path + 'test.csv')#.sample(n=50).reset_index() # split train - test set.
->>>>>>> 3daec0b3c4c24e2e7ea2c7d701ac6af1c7323480
+    HOME_PATH = args.home_path
+    summary_path = args.summary_path
+    test = pd.read_csv(summary_path)
 
     start_test = 0
     tensor_transform_test = transforms.Compose([
@@ -57,7 +54,7 @@ if __name__ == '__main__':
     net.eval()
     print('############### Model Finished ####################')
     print(test.head())
-    path_name = '/gpfs/data/denizlab/Users/bz1030/data/OAI_processed/mix'
+    path_name = args.home_path
     save_dir = '/'.join(args.load_model.split('/')[:-1] + ['attention_map'])
     for idx, row in test.iterrows():
         month = row['Visit']
