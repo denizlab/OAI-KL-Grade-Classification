@@ -1,6 +1,6 @@
 # Knee Joint Localization Model
 The training data is obtained from Tiulpin et al.[1]. The files are located at `../data/detector`. To reproduce the experiment in paper. You will need to:
-1. run `train_test_build.py` to generate train test dataset for the detector from raw OAI dataset. The script takes images from OAI 00m and perform pre-processing.
+1. run `train_test_build.py` to generate train test dataset for the detector from raw OAI dataset. The script takes images input from `../data/detector/OAI_test.csv` and `../data/detector/OAI_val.csv` provided by [1] to build dataset that will be used in the next step. 
 2. Prepare train/test split by following example in [../data/train.csv](https://github.com/denizlab/OAI-KL-Grade-Classification/tree/master/data/detector). The file looks like
 ```
 0,1,2,3,4,5,6,7,8
