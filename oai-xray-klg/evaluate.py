@@ -1,7 +1,3 @@
-"""
-Main training script
-(c) Aleksei Tiulpin, University of Oulu, 2017
-"""
 from __future__ import print_function
 import sys
 
