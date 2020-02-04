@@ -94,9 +94,7 @@ def main(args):
     print(df.shape)
 
     month = '00m'
-    #OAI_DATASET = '/gpfs/data/denizlab/Datasets/OAI_original'
     OAI_DATASET = args.dataset
-    #output_folder = '/gpfs/data/denizlab/Users/bz1030/data/bounding_box/'
     output_folder = args.output_dir
     print(df.shape)
     train = df.sample(frac=0.7)

@@ -19,8 +19,9 @@ parser.add_argument('-md', '--model_dir', action="store", dest="model_dir", type
                     default='../model_weights/ResNet18_/epoch_45.pth')
 parser.add_argument('-cd', '--content-dir', action="store", dest="content_dir", type=str,
                     help="content file", default='../data/OAI_summary.csv')
+# place the original OAI dataset (DICOM  file) in the data home directory
 parser.add_argument('-dh', '--data-home', action="store", dest="data_home", type=str,
-                    help="data home directory", default='/gpfs/data/denizlab/Datasets/OAI_original')
+                    help="data home directory", default='../data/OAI_original')
 parser.add_argument('-m', '--month', action="store", dest="month", type=str,
                     help="which part of OAI to be processed", default='00m')
 parser.add_argument('-nw', '--num-workers', action="store", dest="num_workers", type=int,

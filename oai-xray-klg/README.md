@@ -15,11 +15,16 @@ To reproduce the baseline ResNet experiment and ResNet with CBAM, please run the
 ```bash
 python3 main.py -n baseline -m CBAM -do\
  -au -ep 30 -lr 0.0001 -bs 6 -dm no\
- -d /gpfs/data/denizlab/Users/bz1030/data/OAI_processed_new4/\
- -dc /gpfs/data/denizlab/Users/bz1030/data/OAI_proj15/
+ -d ../data/OAI_processed/\
+ -dc ../data/classifier/
 ```
-Above code will get content file from `OAI_proj15` file and then load data from `OAI_processed_new4`. Arguments `-m` can have `baseline` or `CBAM` which stand for the experiments mentioned in paper. Please refer `./main.py` for description of other arguments.
+Above code will get content file from `../data/classifier/` folder and then load data from `OAI_processed` obtained from detector step.
+ Arguments `-m` can have `baseline` or `CBAM` which stand for the experiments mentioned in paper. Please refer `./main.py` for description of other arguments.
 
+To evaluate certain model after train and model selection by best performance on validation dataset. You can run:
+```bash
+python3 evaluate.py -lm ../model_weights/Classifier/best-model-baseline.pth -hd ../data/classifier/
+```
 To reproduce all attention heatmap, please run the following code
 ```bash
 python3 attention_map.py -lm <model-weights> -hd <home-dir-where-you-saved-h5-files> -sp <summary-path>
