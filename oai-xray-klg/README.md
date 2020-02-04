@@ -1,5 +1,5 @@
 # KL-grade Classifer
-This part of Repo contains code that trains a KL-grade classifier with ResNet and ResNet with [CBAM](https://github.com/Jongchan/attention-module). The ResNet with CBAM code is forked from [CBAM Repo](https://github.com/Jongchan/attention-module)
+This part of Repo contains code that trains a KL-grade classifier with ResNet and ResNet with [CBAM](https://github.com/Jongchan/attention-module). The ResNet with CBAM code is forked from [CBAM Repo](https://github.com/Jongchan/attention-module). Part of training/testing code are adopted from [DeepKnee Repo](https://github.com/MIPT-Oulu/DeepKnee).
 
 # Instruction
 The training of classifier happens after the detector has been trained and all OAI data has been annotated by the detector and pre-processed. Please refer to [../data/classifier](https://github.com/denizlab/OAI-KL-Grade-Classification/tree/master/data/classifier) for how to prepare a content csv file for dataloader. The file looks like
