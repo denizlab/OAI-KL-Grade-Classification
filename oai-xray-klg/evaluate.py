@@ -34,26 +34,17 @@ import pandas as pd
 import time
 import sys
 import argparse
-<<<<<<< HEAD
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-lm', '--load-model', type=str, action='store', dest='load_model', default=None)
+parser.add_argument('-hp', '--home-path', type=str, action='store', dest='home_path', default=None)
 
-=======
-parser = argparse.ArgumentParser()
-parser.add_argument('-lm', '--load-model', type=str, action='store', dest='load_model', default=None)
->>>>>>> 3daec0b3c4c24e2e7ea2c7d701ac6af1c7323480
 if __name__ == '__main__':
     args = parser.parse_args()
     USE_CUDA = torch.cuda.is_available()
     device = torch.device("cuda" if USE_CUDA else "cpu")
-    HOME_PATH = '/gpfs/data/denizlab/Users/bz1030/data/OAI_processed_new4/'
-
-<<<<<<< HEAD
-    test = pd.read_csv(HOME_PATH + 'test_proj15.csv')# .sample(n=20).reset_index() # split train - test set.
-=======
-    test = pd.read_csv(HOME_PATH + 'test.csv')#.sample(n=20).reset_index() # split train - test set.
->>>>>>> 3daec0b3c4c24e2e7ea2c7d701ac6af1c7323480
+    HOME_PATH = args.home_path
+    test = pd.read_csv(HOME_PATH + 'test.csv')# .sample(n=20).reset_index() # split train - test set.
 
     start_test = 0
     tensor_transform_test = transforms.Compose([
@@ -63,11 +54,7 @@ if __name__ == '__main__':
                 ])
     dataset_test = KneeGradingDatasetNew(test, HOME_PATH,tensor_transform_test, False)
 
-<<<<<<< HEAD
     test_loader = data.DataLoader(dataset_test, batch_size=6)
-=======
-    test_loader = data.DataLoader(dataset_test,batch_size=6)
->>>>>>> 3daec0b3c4c24e2e7ea2c7d701ac6af1c7323480
     print('Test data:', len(dataset_test))
     load_model = args.load_model
     print(load_model)
@@ -92,7 +79,6 @@ if __name__ == '__main__':
 
     test_started = time.time()
 
-<<<<<<< HEAD
     test_loss, probs, truth, file_names = validate_epoch(model, test_loader, criterion, use_cuda=USE_CUDA)
     preds = probs.argmax(1)
     # set log file
@@ -104,15 +90,6 @@ if __name__ == '__main__':
     cm = confusion_matrix(truth, preds)
     print('Confusion Matrix:\n', cm.diagonal() / cm.sum(axis=1), file=log_dir)
     print('Confusion Matrix:\n', cm, file=log_dir)
-=======
-    test_loss, probs, truth, _ = validate_epoch(model, test_loader, criterion, use_cuda=USE_CUDA)
-    preds = probs.argmax(1)
-
-    # Validation metrics
-    cm = confusion_matrix(truth, preds)
-    print('Confusion Matrix:\n', cm.diagonal() / cm.sum(axis = 1))
-    print('Confusion Matrix:\n', cm)
->>>>>>> 3daec0b3c4c24e2e7ea2c7d701ac6af1c7323480
 
     kappa = np.round(cohen_kappa_score(truth, preds, weights="quadratic"), 4)
     acc = np.round(np.mean(cm.diagonal().astype(float) / cm.sum(axis=1)), 4)
@@ -127,7 +104,6 @@ if __name__ == '__main__':
     test_kappa.append(kappa)
 
     gc.collect()
-<<<<<<< HEAD
     print('Test losses {}; Test mse {}; Test acc {}; Test Kappa {};\n'.format(test_loss,test_mse,test_acc,kappa), file=log_dir)
     print('Testing took:', time.time() - test_started, 'seconds\n', file=log_dir)
 
@@ -144,9 +120,5 @@ if __name__ == '__main__':
     log_dir.close()
 
 
-=======
-    print('Test losses {}; Test mse {}; Test acc {}; Test Kappa {};'.format(test_loss,test_mse,test_acc,kappa))
-    print('Testing took:', time.time() - test_started, 'seconds')
->>>>>>> 3daec0b3c4c24e2e7ea2c7d701ac6af1c7323480
 
 
