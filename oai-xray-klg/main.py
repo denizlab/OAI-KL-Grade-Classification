@@ -11,9 +11,9 @@ from attn_resnet.models.model_resnet import ResidualNet
 # Arguments
 parser = argparse.ArgumentParser(description='Networks training')
 parser.add_argument('-d', '--data', action="store", dest="data_folder", type=str,
-                    help="Training data directory", default='/gpfs/data/denizlab/Users/bz1030/data/OAI_processed_new4/')
+                    help="Training data directory", default='../data/OAI_processed/')
 parser.add_argument('-dc', '--data-contents', action="store", dest="contents", type=str,
-                    help="Validation data directory", default='/gpfs/data/denizlab/Users/bz1030/data/OAI_proj15/')
+                    help="Validation data directory", default='../data/OAI_processed/')
 parser.add_argument('-bs', '--batch-size', action="store", dest="batch_size", type=int,
                     help="Batch size for training", default=8)
 parser.add_argument('-b', '--beta', action="store", dest="beta", type=float,
