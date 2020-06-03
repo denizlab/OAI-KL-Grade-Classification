@@ -15,5 +15,12 @@ This repo consists of two parts. To reproduce the entire experiments, you will n
 
 # How to cite
 ```latex
-Some latex code
+@inproceedings{zhang2020attention,
+  title={Attention-based cnn for kl grade classification: Data from the osteoarthritis initiative},
+  author={Zhang, Bofei and Tan, Jimin and Cho, Kyunghyun and Chang, Gregory and Deniz, Cem M},
+  booktitle={2020 IEEE 17th International Symposium on Biomedical Imaging (ISBI)},
+  pages={731--735},
+  year={2020},
+  organization={IEEE}
+}
 ```
